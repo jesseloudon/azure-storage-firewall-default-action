@@ -1,0 +1,19 @@
+name: "Azure Storage Firewall Allow or Restrict Network Access"
+author: "Jesse Loudon <loudoninbox@outlook.com>"
+description: "Configures Azure Storage Account Firewall to allow all network access or restrict network access"
+branding:
+  icon: "box"
+  color: "green"
+inputs:
+  resourcegroup_name:
+    description: "The name of the Resource Group containing the Storage Account"
+    required: true
+  storageaccount_name:
+    description: "The name of the Storage Account to configure"
+    required: true
+  configure_firewall_default_action:
+    description: Allowed Values = "Allow" or "Deny"
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
