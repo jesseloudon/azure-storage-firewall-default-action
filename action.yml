@@ -5,14 +5,23 @@ branding:
   icon: "box"
   color: "green"
 inputs:
+  sp_client_id:
+    description: "Service Principal Client ID".
+    required: true
+  sp_client_secret:
+    description: "Service Principal Client Secret".
+    required: true
+  tenant_id:
+    description: "Azure Tenant ID where the SP is created".
+    required: true
   resourcegroup_name:
-    description: "The name of the Resource Group containing the Storage Account"
+    description: "Resource Group name containing the Storage Account".
     required: true
   storageaccount_name:
-    description: "The name of the Storage Account to configure"
+    description: "Storage Account name to configure"
     required: true
   configure_firewall_default_action:
-    description: Allowed Values = "Allow" or "Deny"
+    description: "Default Action to set. Use either "Allow" or "Deny".
     required: true
 runs:
   using: "docker"
