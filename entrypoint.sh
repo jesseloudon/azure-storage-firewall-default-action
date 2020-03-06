@@ -7,7 +7,7 @@ if [ -z "$INPUT_SP_CLIENT_ID" ]; then
   exit 1
 fi
 
-if [ -z "$IINPUT_SP_CLIENT_SECRET" ]; then
+if [ -z "$INPUT_SP_CLIENT_SECRET" ]; then
   echo "Service Principal CLient Secret is not specified - Exiting"
   exit 1
 fi
