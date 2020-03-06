@@ -1,6 +1,6 @@
 name: "Azure Storage Firewall Default Action"
 author: "Jesse Loudon <loudoninbox@outlook.com>"
-description: Configures Azure Storage Account Firewall to "Allow" or "Deny" access
+description: Configures Azure Storage Firewall's Default Action to "Allow" or "Deny" access. Useful to run before or after running storage events e.g. uploading to blob containers.
 branding:
   icon: "shield"
   color: "blue"
