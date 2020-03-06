@@ -2,8 +2,8 @@ name: "Azure Storage Firewall Default Action"
 author: "Jesse Loudon <loudoninbox@outlook.com>"
 description: Configures Azure Storage Account Firewall to "Allow" or "Deny" access
 branding:
-  icon: "box"
-  color: "green"
+  icon: "shield"
+  color: "blue"
 inputs:
   sp_client_id:
     description: Service Principal Client ID
