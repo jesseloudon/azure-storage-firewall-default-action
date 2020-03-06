@@ -1,10 +1,18 @@
 # azure-storage-firewall-default-action
-Configures Azure Storage Firewall default action (Allow or Deny) for network access. 
-This GitHub Action could be useful to run before & after uploading files to Azure blob storage.
+This GitHub Action configures the Azure Storage Firewall's default action (Allow or Deny) for network access.
+
+Azure-Storage-Firewall-Default-Action could be useful to run before & after uploading files to Azure blob storage.
+
+Action Logic:
+1. Authenticate to Azure with Service Principal
+2. Configure the Azure Storage Firewall Default Action
+
+You can read more about Azure Storage Network Security here:
+https://docs.microsoft.com/en-us/azure/storage/common/storage-network-security
 
 ## Usage
 
-### Example
+### Example (firewallAllow)
 
 Place in a `.yml` file such as this one in your `.github/workflows` folder. [Refer to the documentation on workflow YAML syntax here.](https://help.github.com/en/articles/workflow-syntax-for-github-actions)
 
@@ -24,6 +32,14 @@ jobs:
           resourcegroup_name: "AZURE-RG"
           storageaccount_name: ${{ secrets.storageaccount_name }}
           configure_firewall_default_action: "Allow"
+```
+          
+### Example (firewallDeny)
+```yaml
+name: Azure Storage Firewall Default Action
+on: push
+
+jobs:
   firewallDeny:
     runs-on: ubuntu-latest
     steps:
@@ -49,7 +65,7 @@ jobs:
 | `configure_firewall_default_action` | Allowed Values = `"Allow"` or `"Deny"` |
 
 
-### Configure Azure credentials:
+### Configure Azure Service Principal
 
 To fetch the credentials required to authenticate with Azure, run the following command to generate an Azure Service Principal (SPN) with Contributor permissions:
 
