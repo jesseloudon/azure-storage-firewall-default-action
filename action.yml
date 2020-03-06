@@ -1,6 +1,6 @@
-name: "Azure Storage Firewall Allow or Restrict Network Access"
+name: "Azure Storage Firewall Default Action"
 author: "Jesse Loudon <loudoninbox@outlook.com>"
-description: "Configures Azure Storage Account Firewall to allow all network access or restrict network access"
+description: Configures Azure Storage Account Firewall to "Allow" or "Deny" access
 branding:
   icon: "box"
   color: "green"
