@@ -1,2 +1,2 @@
-# azure-storage-firewall-allow
-Configures Azure Storage Account to Allow Access from All Networks
+# azure-storage-firewall-default-action
+Configures Azure Storage Firewall default action (Allow or Deny) for network access
