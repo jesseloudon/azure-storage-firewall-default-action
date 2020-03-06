@@ -32,8 +32,5 @@ if [ -z "$INPUT_CONFIGURE_FIREWALL_DEFAULT_ACTION" ]; then
   exit 1
 fi
 
-#Azure AuthN with Service Principal
 az login --service-principal -u ${INPUT_SP_CLIENT_ID} -p ${INPUT_SP_CLIENT_SECRET} --tenant ${INPUT_TENANT_ID}
-
-# Configure Azure Storage Firewall Default Action
 az storage account update --resource-group ${INPUT_RESOURCEGROUP_NAME} --name ${INPUT_STORAGEACCOUNT_NAME} --default-action ${INPUT_CONFIGURE_FIREWALL_DEFAULT_ACTION}
