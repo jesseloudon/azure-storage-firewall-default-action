@@ -13,7 +13,7 @@ name: Azure Storage Firewall Default Action
 on: push
 
 jobs:
-  safirewall:
+  firewallAllow:
     runs-on: ubuntu-latest
     steps:
       - uses: jesseloudon/azure-storage-firewall-default-action/v1.0
@@ -23,7 +23,18 @@ jobs:
           tenant_id: ${{ secrets.tenant_id }}
           resourcegroup_name: "AZURE-RG"
           storageaccount_name: ${{ secrets.storageaccount_name }}
-          configure_firewall_default_action: "Allow" or "Deny"
+          configure_firewall_default_action: "Allow"
+  firewallDeny:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: jesseloudon/azure-storage-firewall-default-action/v1.0
+        with:
+          sp_client_id: ${{ secrets.sp_client_id }}
+          sp_client_secret: ${{ secrets.sp_client_secret }}
+          tenant_id: ${{ secrets.tenant_id }}
+          resourcegroup_name: "AZURE-RG"
+          storageaccount_name: ${{ secrets.storageaccount_name }}
+          configure_firewall_default_action: "Deny"
 ```
 
 ### Required Variables
