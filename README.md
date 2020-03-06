@@ -1,5 +1,6 @@
 # azure-storage-firewall-default-action
-Configures Azure Storage Firewall default action (Allow or Deny) for network access
+Configures Azure Storage Firewall default action (Allow or Deny) for network access. 
+This GitHub Action could be useful to run before & after uploading files to Azure blob storage.
 
 ## Usage
 
