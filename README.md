@@ -24,7 +24,7 @@ jobs:
   firewallAllow:
     runs-on: ubuntu-latest
     steps:
-      - uses: jesseloudon/azure-storage-firewall-default-action/v1.0
+      - uses: jesseloudon/azure-storage-firewall-default-action/v1.1
         with:
           sp_client_id: ${{ secrets.sp_client_id }}
           sp_client_secret: ${{ secrets.sp_client_secret }}
@@ -43,7 +43,7 @@ jobs:
   firewallDeny:
     runs-on: ubuntu-latest
     steps:
-      - uses: jesseloudon/azure-storage-firewall-default-action/v1.0
+      - uses: jesseloudon/azure-storage-firewall-default-action/v1.1
         with:
           sp_client_id: ${{ secrets.sp_client_id }}
           sp_client_secret: ${{ secrets.sp_client_secret }}
