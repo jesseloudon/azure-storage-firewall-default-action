@@ -6,7 +6,7 @@ LABEL "com.github.actions.icon"="shield"
 LABEL "com.github.actions.color"="blue"
 LABEL "repository"="https://github.com/jesseloudon/azure-storage-firewall-default-action"
 LABEL "homepage"="https://github.com/jesseloudon/azure-storage-firewall-default-action"
-LABEL "maintainer"="Jesse Loudon <loudoninbox@outlook.com>"
+LABEL "maintainer"="Jesse Loudon <gitbao@outlook.com>"
 
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x entrypoint.sh
